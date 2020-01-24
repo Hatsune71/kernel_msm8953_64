@@ -370,7 +370,7 @@ CHECK		= sparse
 
 # Use the wrapper for the compiler.  This wrapper scans for new
 # warnings and causes the build to stop upon encountering them.
-CC		= $(REAL_CC)
+CC		= $(srctree)/scripts/gcc-wrapper.py $(REAL_CC)
 
 CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
 		  -Wbitwise -Wno-return-void $(CF)
@@ -677,7 +677,7 @@ ifdef CONFIG_CC_STACKPROTECTOR_STRONG
 #	      -fstack-protector-strong not supported by compiler)
 #  endif
   stackp-flag := $(call cc-option, -fno-stack-protector)
-#xiaopei 9102-3-7 HTH-49751 CTS£ºandroid.security.cts.KernelConfigTest#testConfigStackProtectorStrong
+#xiaopei 9102-3-7 HTH-49751 CTSÂ£Âºandroid.security.cts.KernelConfigTest#testConfigStackProtectorStrong
 else
   # Force off for distro compilers that enable stack protector by default.
   stackp-flag := $(call cc-option, -fno-stack-protector)
