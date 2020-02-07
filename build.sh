@@ -1,6 +1,6 @@
-git clone git://github.com/krasCGQ/aarch64-linux-android - opt-gnu-8.x --depth=1 ~/gcc8
+git clone https://bitbucket.org/UBERTC/aarch64-linux-android-7.0-kernel.git ~/gcc7
 export ARCH=arm64
-export CROSS_COMPILE=~/gcc8/bin/aarch64-linux-android-
+export CROSS_COMPILE=~/gcc7/bin/aarch64-linux-android-
 mkdir output
 make -C $(pwd) O=output ysl_defconfig
 make -j32 -C $(pwd) O=output
