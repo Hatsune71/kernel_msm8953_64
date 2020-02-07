@@ -11,4 +11,4 @@ git clone https://github.com/mahajant99/AnyKernel3.git -b ysl-aosp zip
 cp -r output/arch/arm64/boot/Image.gz-dtb zip/
 cd zip
 mv Image.gz-dtb zImage 
-zip -r Test-Pie-kernel.zip *
+zip -r Miku-Kernel-Test.zip *
