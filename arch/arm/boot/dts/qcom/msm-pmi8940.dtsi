@@ -196,7 +196,7 @@
 			qcom,charge-unknown-battery;
 			/*xiaomi-jeita*/
 			qcom,jeita-temp-hard-limit = <1>;
-			qcom,fastchg-current-comp = <1500>;
+			qcom,fastchg-current-comp = <1300>;
 			qcom,cool-xiaomi-bat-decidegc = <50>;
 			qcom,override-usb-current;
 
