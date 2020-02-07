@@ -1,6 +1,9 @@
-git clone https://bitbucket.org/UBERTC/aarch64-linux-android-7.0-kernel.git ~/gcc7
+rm -rf ~/tool
+rm -rf ~/Miku-Kernel/output
+rm -rf ~/Miku-Kernel/zip
+git clone https://github.com/ThinkerJ/toolchain-4.9.git -b master ~/tool
 export ARCH=arm64
-export CROSS_COMPILE=~/gcc7/bin/aarch64-linux-android-
+export CROSS_COMPILE=~/tool/bin/aarch64-linux-android-
 mkdir output
 make -C $(pwd) O=output ysl_defconfig
 make -j32 -C $(pwd) O=output
