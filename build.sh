@@ -22,5 +22,5 @@ echo "[8/9] copy = image.dtb"
 echo "Create Flashable zip"
 mv Image.gz-dtb zImage 
 zip -r Miku-Kernel-Test.zip *
-echo "[7/7] Finished...."
+echo "[9/9] Finished...."
 
