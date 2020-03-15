@@ -4,13 +4,7 @@ rm -rf ~/tool
 rm -rf ~/$(pwd)/output
 rm -rf ~/$(pwd)/zip
 echo "[2/9] Cloning ToolChain....."
-git clone echo "Initialize build system...."
-echo "[1/9] Cleaning Directory....."
-rm -rf ~/tool
-rm -rf ~/$(pwd)/output
-rm -rf ~/$(pwd)/zip
-echo "[2/9] Cloning ToolChain....."
-git https://github.com/ThinkerJ/toolchain-4.9.git ~/tool
+git clone https://github.com/ThinkerJ/toolchain-4.9.git ~/tool
 echo "[3/9] Toolchain has been Cloned......"
 export ARCH=arm64
 export CROSS_COMPILE=~/tool/bin/aarch64-linux-gnu-
