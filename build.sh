@@ -4,10 +4,10 @@ rm -rf ~/tool
 rm -rf ~/$(pwd)/output
 rm -rf ~/$(pwd)/zip
 echo "[2/9] Cloning ToolChain....."
-git clone https://github.com/kdrag0n/aarch64-elf-gcc.git ~/tool
+git clone https://github.com/ThinkerJ/toolchain-4.9.git ~/tool
 echo "[3/9] Toolchain has been Cloned......"
 export ARCH=arm64
-export CROSS_COMPILE=~/tool/bin/aarch64-elf-
+export CROSS_COMPILE=~/tool/bin/aarch64-linux-android-
 echo "[4/9] Mkdir output......"
 mkdir output
 echo "[5/9] Make Kernel......"
