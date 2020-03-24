@@ -4,17 +4,17 @@ rm -rf ~/tool
 rm -rf ~/$(pwd)/output
 rm -rf ~/$(pwd)/zip
 echo "[2/9] Cloning ToolChain....."
-git clone https://github.com/ThinkerJ/toolchain-4.9.git ~/tool
+git clone https://github.com/kdrag0n/aarch64-elf-gcc.git ~/tool
 echo "[3/9] Toolchain has been Cloned......"
 export ARCH=arm64
-export CROSS_COMPILE=~/tool/bin/aarch64-linux-gnu-
+export CROSS_COMPILE=~/tool/bin/aarch64-elf-
 echo "[4/9] Mkdir output......"
 mkdir output
 echo "[5/9] Make Kernel......"
-make -C $(pwd) O=output ysl_defconfig
+make -C $(pwd) O=output Miku_ysl_defconfig
 make -j32 -C $(pwd) O=output
 echo "[6/9] Cloning some stuff...."
-git clone https://github.com/mahajant99/AnyKernel3.git -b ysl-aosp zip
+git clone https://github.com/ThinkerJ/AnyKernel3.git zip
 echo "[7/9] Stuff cloned..."
 cp -r output/arch/arm64/boot/Image.gz-dtb zip/
 cd zip
